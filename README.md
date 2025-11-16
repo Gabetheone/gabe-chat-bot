@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+🧠 Ask Gabriel – Personal AI Chat Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ask Gabriel is a personal AI chat assistant built with React, Node.js, and Cohere’s Command-A model.
+It acts as a conversational guide to my background, skills, and portfolio projects — allowing visitors, recruiters, or collaborators to learn about me interactively.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+Conversational AI powered by Cohere v2 API (command-a-03-2025 model)
 
-### `npm start`
+Natural, first-person responses — speaks as Gabriel Elart
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clean, responsive chat UI built with React
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Secure backend using Express + dotenv (keeps API keys safe)
 
-### `npm test`
+Modular structure, ready for integration into a personal portfolio website
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🧩 Tech Stack
+Layer	Tools
+Frontend	React, CSS (custom styling), Fetch API
+Backend	Node.js, Express.js
+AI Provider	Cohere AI (Command-A-03-2025)
+Environment Management	dotenv
+Deployment-ready	Render / Vercel / Railway
+🛠️ Setup Instructions
+1️⃣ Clone the repository
+git clone https://github.com/GabeTheOne/gabe-chat-bot.git
+cd gabe-chat-bot
 
-### `npm run build`
+2️⃣ Install dependencies
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3️⃣ Create a .env file in the root directory:
+COHERE_API_KEY=your_cohere_api_key_here
+PORT=4000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4️⃣ Start the backend server
+node server.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Server will run on http://localhost:4000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5️⃣ Start the React frontend
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Frontend will run on http://localhost:3000 (or next available port).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+💬 How It Works
 
-## Learn More
+User sends a message in the React chat UI.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The frontend calls the /api/chat route on the Node server.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The server sends the message (plus Gabriel’s profile data) to Cohere’s model.
 
-### Code Splitting
+The AI generates a natural, in-character response that sounds like Gabriel.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The frontend displays the reply in a sleek, chat-style interface.
 
-### Analyzing the Bundle Size
+⚙️ Project Structure
+gabe-chat-bot/
+│
+├── src/
+│   ├── App.js              # Main React chat UI
+│   ├── App.css             # Styling
+│   ├── gabrielProfile.js   # Personal structured data for AI context
+│   └── ...
+│
+├── server.js               # Express backend (handles Cohere API)
+├── .env                    # Environment variables (not committed)
+├── package.json
+└── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🌐 Future Plans
 
-### Making a Progressive Web App
+Integrate into my personal portfolio website (gabriel-elart.dev)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Add context-aware chat modes (Recruiter / Developer / Casual)
 
-### Advanced Configuration
+Include typing animation and chat history memory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Host backend via Render and frontend via Vercel
 
-### Deployment
+👨‍💻 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Gabriel Elart
+Frontend-focused Software Engineer based in New York
+📍 GitHub
