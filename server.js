@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const { CohereClient } = require("cohere-ai");
-const gabrielProfile = require(path.join(__dirname, "src", "gabrielProfile.js"));
+const gabrielProfile = require(path.join(__dirname, "gabrielProfile.js"));
 
 const app = express();
 const PORT = process.env.PORT || 4000;
